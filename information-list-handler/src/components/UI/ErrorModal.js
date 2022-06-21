@@ -1,15 +1,16 @@
 import Button from "./Button";
 import Card from "./Card";
+import "./ErrorModal.css";
 
 const ErrorModal = (props) => {
     return(
         <div>
             <div className="backdrop" onClick={props.onConfirm}/>
-        <Card>
+        <Card className="error-modal">
             <header>
             <h2>{props.title}</h2>
             </header>
-            <div>
+            <div className="content" >
                 <p>{props.message}</p>
             </div>
             <footer>

@@ -15,12 +15,12 @@ const Form = (props) => {
     event.preventDefault();
     if(enteredUsername.trim().length === 0 || enteredAge.trim().length === 0){
       setError({
-        title:"Invalid input", message: "please enter valid details"
+        title:"No input", message: "please enter some details"
       });
       return;
-    }if(+enteredAge < 1) {
+    }if(+enteredAge < 1 || +enteredAge>100) {
       setError({
-        title:"Invalid input", message: "please enter valid details"
+        title:"Invalid Age", message: "please enter valid age (0<age<100)"
       });
       return;
     }
